@@ -29,7 +29,9 @@
   console.log(text);
 
   // 1) Новий рядок із символів з індексами 12, 6, 18, 25 [cite: 142]
-  let newString = text[12] + text[6] + text[18] + text[25];
+  const indexes = [12, 6, 18, 25];
+
+  let newString = indexes.map(i => text[i]).join('');
   console.log('--- 1. Рядок з індексів 12, 6, 18, 25 ---');
   console.log(newString);
 
