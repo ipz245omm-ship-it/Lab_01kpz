@@ -1,0 +1,17 @@
+/* Стилі для таблиці з частини 1.2 */
+    table {
+      border-collapse: collapse; /* Прибирає подвійні рамки */
+      margin: 20px auto;
+    }
+
+    td {
+      width: 40px;
+      height: 40px;
+      border: 2px solid black;
+      transition: background-color 0.3s;
+    }
+
+    /* Клас для зафарбування комірок */
+    .selected {
+      background-color: yellow;
+    }
