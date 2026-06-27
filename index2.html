@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 2 (ЛР №2)</title>
+
+  <style>
+    /* Базові стилі для сторінки */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Завдання 2. Основи роботи з рядками</h1>
+<p>Весь результат знаходиться в консолі розробника (F12).</p>
+
+<script>
+  // Дано рядок тексту [cite: 140-141]
+  let text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ea earum incidunt minima nihil.\nBlanditiis consectetur cumque debitis delectus dolor dolorem dolorum, eos laboriosam, modi nemo, quasi quos sint voluptatibus!';
+
+  console.log('--- Початковий текст ---');
+  console.log(text);
+
+  // 1) Новий рядок із символів з індексами 12, 6, 18, 25 [cite: 142]
+  let newString = text[12] + text[6] + text[18] + text[25];
+  console.log('--- 1. Рядок з індексів 12, 6, 18, 25 ---');
+  console.log(newString);
+
+  // 2) Рядок у нижньому регістрі [cite: 143]
+  console.log('--- 2. Текст у нижньому регістрі ---');
+  console.log(text.toLowerCase());
+
+  // 3) Всі позиції, де зустрічається "in" [cite: 144]
+  console.log('--- 3. Усі входження "in" ---');
+  let pos = -1;
+  while ((pos = text.indexOf('in', pos + 1)) !== -1) {
+    console.log(`Знайдено "in" на позиції: ${pos}`);
+  }
+
+  // 4) Масив підрядків (роздільник - пробіл) [cite: 145]
+  let wordsArray = text.split(' ');
+  console.log('--- 4. Масив слів (розділений пробілом) ---');
+  console.log(wordsArray);
+
+  // 5) Інвертований рядок (зворотний порядок) [cite: 146]
+  let reversedText = text.split('').reverse().join('');
+  console.log('--- 5. Інвертований рядок ---');
+  console.log(reversedText);
+
+  // 6) Функція ucFirst (перша літера - велика) [cite: 147]
+  function ucFirst(txt) {
+    if (!txt) return txt; // Перевірка на порожній рядок
+    let newTxt = txt[0].toUpperCase() + txt.slice(1); // [cite: 148]
+    return newTxt; // [cite: 149]
+  }
+
+  console.log('--- 6. Функція ucFirst ---');
+  console.log(ucFirst('some text')); // [cite: 151]
+</script>
+</body>
+</html>
